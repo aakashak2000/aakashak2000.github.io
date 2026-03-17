@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aakash Kumar — AI/ML Engineer & Researcher</title>
+<title>Aakash Kumar — ML Engineer / Data Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -85,11 +85,11 @@
 
   /* ── LAYOUT ────────────────────────── */
   .wrapper {
-    max-width: 920px; margin: 0 auto;
+    max-width: 980px; margin: 0 auto;
     padding: 82px 28px 64px;
     display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 52px;
+    grid-template-columns: 260px 1fr;
+    gap: 56px;
     align-items: start;
   }
 
@@ -97,13 +97,15 @@
   .sidebar {
     position: sticky; top: 66px;
     display: flex; flex-direction: column;
+    align-items: flex-start;
   }
   .photo-wrap {
-    width: 130px; height: 130px;
+    width: 170px; height: 170px;
     border-radius: 50%; overflow: hidden;
     background: var(--surface2);
-    border: 2.5px solid var(--border);
-    margin-bottom: 16px;
+    border: 3px solid var(--border);
+    margin-bottom: 20px;
+    flex-shrink: 0;
   }
   .photo-wrap img {
     width: 100%; height: 100%;
@@ -119,44 +121,75 @@
   }
   .sidebar-name {
     font-family: 'DM Serif Display', serif;
-    font-size: 21px; line-height: 1.15;
-    letter-spacing: -0.025em;
-    color: var(--text); margin-bottom: 5px;
+    font-size: 26px; line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--text); margin-bottom: 6px;
   }
-  .sidebar-sub {
-    font-size: 12px; color: var(--text-muted);
-    line-height: 1.6; margin-bottom: 14px;
+  .sidebar-degree {
+    font-size: 13.5px; font-weight: 500;
+    color: var(--text-muted); margin-bottom: 3px;
+    line-height: 1.5;
   }
-  .sidebar-sub span { display: block; }
+  .sidebar-affil {
+    font-size: 12.5px; color: var(--text-faint);
+    margin-bottom: 4px; line-height: 1.5;
+  }
+  .sidebar-location {
+    font-size: 12px; color: var(--text-faint);
+    margin-bottom: 18px; display: flex;
+    align-items: center; gap: 4px;
+  }
+  .sidebar-location svg { opacity: 0.5; flex-shrink: 0; }
+
   .open-badge {
     display: inline-flex; align-items: center; gap: 5px;
     background: var(--badge-bg); color: var(--badge-text);
-    font-size: 10.5px; font-weight: 600; letter-spacing: 0.02em;
-    padding: 4px 9px; border-radius: 20px;
-    margin-bottom: 18px; width: fit-content;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 5px 11px; border-radius: 20px;
+    margin-bottom: 22px; width: fit-content;
   }
   .open-badge::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    content: ''; width: 7px; height: 7px; border-radius: 50%;
     background: currentColor;
     animation: blink 2s ease-in-out infinite;
   }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
 
-  .social-links { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+  /* icon-row social links — like Sid's */
+  .social-icons {
+    display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .social-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text-muted);
+    text-decoration: none; transition: all 0.18s;
+    flex-shrink: 0;
+  }
+  .social-icon:hover {
+    color: var(--text); border-color: var(--accent);
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+  }
+  .social-icon svg { display: block; }
+
+  /* text social links below icons */
+  .social-links { display: flex; flex-direction: column; gap: 5px; margin-bottom: 20px; width: 100%; }
   .social-links a {
     display: flex; align-items: center; gap: 8px;
     text-decoration: none; color: var(--text-muted);
-    font-size: 12.5px; padding: 3px 0;
-    transition: color 0.18s;
+    font-size: 13px; padding: 4px 0;
+    transition: color 0.18s; border-bottom: 1px solid transparent;
   }
   .social-links a:hover { color: var(--text); }
-  .social-links a svg { opacity: 0.65; flex-shrink: 0; }
+  .social-links a svg { opacity: 0.55; flex-shrink: 0; }
 
   .cv-btn {
-    display: flex; align-items: center; justify-content: center; gap: 6px;
+    display: flex; align-items: center; justify-content: center; gap: 7px;
     background: var(--accent); color: var(--bg);
-    text-decoration: none; font-size: 12.5px; font-weight: 500;
-    padding: 9px 0; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 10px 0; border-radius: 9px; width: 100%;
     transition: opacity 0.18s; letter-spacing: 0.01em;
   }
   .cv-btn:hover { opacity: 0.78; }
@@ -343,10 +376,10 @@
   footer a { color: var(--text-faint); text-decoration: none; }
   footer a:hover { color: var(--text-muted); }
 
-  @media (max-width: 680px) {
+  @media (max-width: 700px) {
     .wrapper { grid-template-columns: 1fr; gap: 28px; padding-top: 72px; }
-    .sidebar { position: static; flex-direction: row; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-    .photo-wrap { width: 80px; height: 80px; flex-shrink: 0; margin-bottom: 0; }
+    .sidebar { position: static; }
+    .photo-wrap { width: 100px; height: 100px; }
     .skills-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     nav { padding: 0 18px; }
@@ -385,20 +418,42 @@
       <img src="aakash.jpg" alt="Aakash Kumar"
         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="photo-placeholder" style="display:none">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="margin-bottom:5px;opacity:0.35"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="margin-bottom:6px;opacity:0.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         add aakash.jpg
       </div>
     </div>
 
     <div class="sidebar-name">Aakash Kumar</div>
-    <div class="sidebar-sub">
-      <span>MS CS (AI) · USC Viterbi</span>
-      <span>AI/ML Engineer · Researcher</span>
-      <span>Mumbai → Los Angeles</span>
+    <div class="sidebar-degree">MS CS (AI) · USC Viterbi</div>
+    <div class="sidebar-affil">Computer Science Department</div>
+    <div class="sidebar-affil">University of Southern California</div>
+    <div class="sidebar-location">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Los Angeles, CA
     </div>
 
-    <div class="open-badge">Open to SWE / MLE · 2026</div>
+    <div class="open-badge">Open to SWE / MLE · 2027</div>
 
+    <!-- icon row -->
+    <div class="social-icons">
+      <a class="social-icon" href="mailto:aakash@usc.edu" title="Email">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+      <a class="social-icon" href="https://twitter.com/aakashak2k" target="_blank" rel="noopener" title="Twitter / X">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+      </a>
+      <a class="social-icon" href="https://www.linkedin.com/in/aakashak2k" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a class="social-icon" href="https://github.com/aakashak2k" target="_blank" rel="noopener" title="GitHub">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      </a>
+      <a class="social-icon" href="#" title="Google Scholar — add link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </a>
+    </div>
+
+    <!-- text links -->
     <div class="social-links">
       <a href="mailto:aakash@usc.edu">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -406,20 +461,16 @@
       </a>
       <a href="https://www.linkedin.com/in/aakashak2k" target="_blank" rel="noopener">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
+        linkedin.com/in/aakashak2k
       </a>
       <a href="https://github.com/aakashak2k" target="_blank" rel="noopener">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        GitHub
-      </a>
-      <a href="#" title="Add your Google Scholar link here">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        Google Scholar
+        github.com/aakashak2k
       </a>
     </div>
 
     <a class="cv-btn" href="aakash_resume.pdf" download>
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Download CV
     </a>
   </aside>
@@ -430,10 +481,10 @@
     <section id="about">
       <div class="section-label">About</div>
       <div class="about-text">
-        <p>I'm an <strong>MS CS student (AI track)</strong> at <strong>USC Viterbi</strong>, building on nearly five years of industry experience shipping production AI systems for financial institutions across India and the Middle East.</p>
-        <p>Before USC, I spent 4.5 years at <strong>Arya.ai</strong> — an AI-FinTech startup — progressing from Data Scientist to Senior Research Scientist. I led development of production RAG pipelines, document intelligence systems (OCR/IDP), multimodal AI, and LLM-powered financial tools that serve real clients at scale.</p>
-        <p>My interests sit at the intersection of <strong>ML theory and deployed systems</strong> — understanding why models work and building things that actually run in production. I'm currently deepening my theoretical foundations at USC while staying close to applied work through personal projects and writing.</p>
-        <p>Targeting <strong>SWE AI/ML, AI Engineer, or ML Engineer</strong> roles at FAANG, frontier AI labs, or well-funded startups. Open to summer 2026 opportunities.</p>
+        <p>I'm an <strong>MS CS student (AI track)</strong> at <strong>USC Viterbi</strong>, building on nearly five years of industry experience shipping production AI systems for financial institutions across Asia and Europe.</p>
+        <p>Before USC, I spent 4.5 years at <strong>Arya.ai</strong> — an AI-FinTech startup — progressing from Data Scientist to Senior Research Scientist. I led development of production RAG pipelines, document intelligence systems (OCR/IDP), multimodal AI, and LLM-powered financial tools that serve real clients at scale leveraging both open source models and resources and Cloud AI platforms like Microsoft Azure and GCP.</p>
+        <p>My interests sit at the intersection of <strong>ML theory and deployed systems</strong> — understanding why models work and building things that actually run in production. I'm currently deepening my theoretical foundations at USC while focusing more on building applications through personal projects and writing and exploring new methods of ML and LLM theory.</p>
+        <p>Targeting <strong>SWE AI/ML, AI Engineer, or ML Engineer</strong> roles at FAANG, frontier AI labs, or well-funded startups. Open to summer 2027 opportunities.</p>
       </div>
     </section>
 
@@ -452,8 +503,8 @@
           </div>
           <div class="tl-body"><ul>
             <li>Studying ML theory: PAC learning, kernel methods, SVMs, generalization bounds, optimization, and algorithms</li>
-            <li>Coursework: CSCI 567 Machine Learning, CSCI 570 Algorithms, and advanced AI electives</li>
-            <li>Building a LinkedIn content series bridging practitioner intuition with rigorous theoretical ML</li>
+            <li>Coursework: CSCI 567 Machine Learning and CSCI 570 Algorithms.</li>
+            <li>Building a written content series bridging practitioner intuition with rigorous theoretical ML</li>
           </ul></div>
         </div>
 
@@ -467,9 +518,8 @@
             <div class="tl-date">Jan 2025 — Dec 2025</div>
           </div>
           <div class="tl-body"><ul>
-            <li>Led R&D on production LLM and multimodal AI systems for banks and insurers across India and the Middle East</li>
-            <li>Designed and shipped a multi-speaker Hindi TTS system using Azure Cognitive Services and SSML</li>
-            <li>Built a RAG-powered financial chatbot integrating the SmartLender API with live inference pipelines</li>
+            <li>Led developement and deployment of production LLM and multimodal AI systems for banks and insurers across Asia and Europe.</li>
+            <li>Designed and shipped a multi-speaker Hindi TTS system using Azure Cognitive Services.</li>
             <li>Developed UK document tampering detection pipeline using vision APIs for KYC compliance</li>
           </ul></div>
         </div>
@@ -517,14 +567,14 @@
           <div class="tl-dot filled"></div>
           <div class="tl-header">
             <div>
-              <div class="tl-role">MS Computer Science — AI Track</div>
+              <div class="tl-role">MS Computer Science</div>
               <div class="tl-org"><a href="https://www.usc.edu" target="_blank" rel="noopener">University of Southern California</a> · Los Angeles, CA</div>
             </div>
             <div class="tl-date">2026 — 2027</div>
           </div>
           <div class="tl-body"><ul>
-            <li>Viterbi School of Engineering · specialisation in Artificial Intelligence</li>
-            <li>Relevant courses: Machine Learning (567), Algorithms (570), and advanced AI theory electives</li>
+            <li>Viterbi School of Engineering</li>
+            <li>Relevant courses: Machine Learning (567) and Algorithms (570).</li>
           </ul></div>
         </div>
 
@@ -538,7 +588,7 @@
             <div class="tl-date">2017 — 2021</div>
           </div>
           <div class="tl-body"><ul>
-            <li>School of Technology, Management & Engineering (STME)</li>
+            <li>School of Technology, Management & Engineering (MPSTME)</li>
             <li>Focus on statistical learning, data engineering, and applied ML systems</li>
           </ul></div>
         </div>
