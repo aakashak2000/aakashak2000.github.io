@@ -758,6 +758,27 @@ footer a:hover { color: var(--text-muted); }
     <article id="experience">
       <h2 class="section-title">Experience</h2>
       <div class="timeline">
+        <!-- USC Research -->
+        <div class="company-group">
+          <div class="company-header">
+            <span class="company-name"><a href="https://www.usc.edu" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">University of Southern California</a> · Los Angeles, CA</span>
+          </div>
+ 
+          <div class="tl-item">
+            <div>
+              <div class="tl-role">Graduate Research Assistant</div>
+              <div class="tl-org">Advisor: <a href="https://viterbi.usc.edu/directory/faculty/Penkova/Anita" target="_blank" rel="noopener">Prof. Anita Penkova</a> · USC Viterbi</div>
+            </div>
+            <div class="tl-date">Mar 2026 — Present</div>
+            <div class="tl-body"><ul>
+              <li>Researching non-invasive anemia detection from conjunctival images using multimodal deep learning, combining image and tabular features for binary classification.</li>
+              <li>Designed and benchmarked a synthetic data generation pipeline using image-to-image diffusion (DDIM), demonstrating improvement over standard augmentation and a real-data-only baseline.</li>
+              <li>Evaluating self-supervised learning techniques (BYOL, DINO) to improve model generalisation under limited labelled data (~700 training samples).</li>
+              <li>Exploring regression-based severity estimation, predicting continuous haemoglobin levels from images and thresholding to binary labels, to improve learning signal and reduce class boundary noise.</li>
+            </ul></div>
+          </div>
+        </div>
+
 
         <!-- Arya.ai -->
         <div class="company-group">
@@ -783,6 +804,7 @@ footer a:hover { color: var(--text-muted); }
             </div>
             <div class="tl-date">Jun 2024 — Apr 2025</div>
             <div class="tl-body"><ul>
+              <li>Led APEX API Marketplace development, transforming a FinTech platform into an enterprise-grade solution with CI/CD pipelines, supporting 50+ APIs in production across global financial institutions.</li>
               <li>Deployed Qwen vision language model for automated invoice extraction on-premises, processing ~9,000 invoices per month for enterprise clients with high field-level accuracy.</li>
               <li>Implemented FAISS-based RAG architecture for an enterprise HR Bot, processing policy documents and terms and conditions to deliver personalised employee recommendations at scale, achieving ~80% answer relevance on internal evaluation.</li>
             </ul></div>
@@ -794,9 +816,8 @@ footer a:hover { color: var(--text-muted); }
             </div>
             <div class="tl-date">Aug 2021 — May 2024</div>
             <div class="tl-body"><ul>
-              <li>Led APEX API Marketplace development, transforming a FinTech platform into an enterprise-grade solution with CI/CD pipelines, supporting 50+ APIs in production across global financial institutions.</li>
               <li>Deployed containerised signature detection API on on-premises infrastructure using computer vision models, achieving 95% accuracy for real-time document verification.</li>
-              <li>Engineered KYC automation systems with deep learning models for Indian ID card processing (Aadhaar, PAN, Passport), benefiting 85% of Indian insurance firms — scaled to production ML APIs on GCP and Azure handling 1M+ datapoints per month with ~95% extraction accuracy.</li>
+              <li>Engineered KYC automation systems with deep learning models for Indian ID card processing (Aadhaar, PAN, Passport), benefiting 85% of Indian insurance firms, scaled to production ML APIs on GCP and Azure handling 1M+ datapoints per month with ~95% extraction accuracy.</li>
               <li>Partnered with one of India's leading banks to deploy containerised AI APIs for data extraction and verification, processing 30,000+ documents per month in production.</li>
               <li>Developed NLP-powered analytics for call sentiment analysis and entity extraction, improving sales conversion by ~30% through large-scale data processing.</li>
             </ul></div>
